@@ -572,6 +572,8 @@ case $host in
     GMP_INCLUDE_MPN(arm/arm-defs.m4)
     case $host_cpu in
       armsa1 | armv4*)
+	path="arm"
+	gcc_cflags_arch="-march=armv4"
 	;;
       armxscale | arm926 | arm946 | arm966 | arm1026 | armv5*)
 	path="arm/v5 arm"

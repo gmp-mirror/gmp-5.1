@@ -1,3 +1,7 @@
+2013-04-27  Mike Frysinger  <vapier@gentoo.org>
+
+	* configure.ac (arm*-*-*): Set up path also for plainest CPU variants.
+
 2013-03-11  Torbjorn Granlund  <tege@gmplib.org>
 
 	* tests/mpz/t-powm_ui.c: Test larger arguments.

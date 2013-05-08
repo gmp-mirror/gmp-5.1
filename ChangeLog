@@ -1,3 +1,7 @@
+2013-05-09  Torbjorn Granlund  <tege@gmplib.org>
+
+	* mpn/x86_64/bd1/mul_1.asm: Fix typo.
+
 2013-04-27  Mike Frysinger  <vapier@gentoo.org>
 
 	* configure.ac (arm*-*-*): Set up path also for plainest CPU variants.

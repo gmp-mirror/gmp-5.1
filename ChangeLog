@@ -41,6 +41,9 @@
 
 2013-02-17  Marc Glisse  <marc.glisse@inria.fr>
 
+	* cxx/osdoprnti.cc: Use <stdarg.h> and <string.h> rather than <cstdarg>
+	and <cstring> (revert 2002-12-21).
+
 	* tests/cxx/t-ops2.cc: Use <math.h> rather than <cmath> and using
 	namespace. Don't include <iostream>.
 

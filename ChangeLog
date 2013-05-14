@@ -39,6 +39,11 @@
 	* mini-gmp/tests/t-reuse.c: Fix typo causing the same negation condition
 	to be applied to all operands. (See 2013-02-03, Torbjorn)
 
+2013-02-17  Marc Glisse  <marc.glisse@inria.fr>
+
+	* tests/cxx/t-ops2.cc: Use <math.h> rather than <cmath> and using
+	namespace. Don't include <iostream>.
+
 2013-02-16  Marc Glisse  <marc.glisse@inria.fr>
 
 	* gmpxx.h: Include <algorithm>.

@@ -11,6 +11,11 @@
 
 	* configure.ac (arm*-*-*): Set up path also for plainest CPU variants.
 
+2012-03-17  Marc Glisse  <marc.glisse@inria.fr>
+
+	* tests/cxx/t-do-exceptions-work-at-all-with-this-compiler.cc: New file.
+	* tests/cxx/Makefile.am: Add new file. Reorder the tests.
+
 2013-03-11  Torbjorn Granlund  <tege@gmplib.org>
 
 	* tests/mpz/t-powm_ui.c: Test larger arguments.

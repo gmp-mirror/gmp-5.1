@@ -570,6 +570,8 @@ case $host in
     gcc_cflags_maybe="-marm"
     gcc_testlist="gcc-arm-umodsi"
     GMP_INCLUDE_MPN(arm/arm-defs.m4)
+    CALLING_CONVENTIONS_OBJS='arm32call.lo arm32check.lo'
+
     case $host_cpu in
       armsa1 | armv4*)
 	path="arm"
@@ -585,7 +587,7 @@ case $host in
 	;;
       arm1156)
 	path="arm/v6t2 arm/v6 arm/v5 arm"
-	gcc_cflags_arch="-march=armv6"
+	gcc_cflags_arch="-march=armv6t2"
 	;;
       armcortexa9)
 	path="arm/v7a/cora9 arm/v6t2 arm/v6 arm/v5 arm"
@@ -1260,7 +1262,7 @@ case $host in
         path="sparc32/v8/supersparc sparc32/v8 sparc32" ;;
       [sparc64 | sparcv9* | ultrasparc | ultrasparc[234]*])
         path="sparc32/v9 sparc32/v8 sparc32" ;;
-      [ultrasparct[1234]])
+      [ultrasparct[12345]])
         path="sparc32/ultrasparct1 sparc32/v8 sparc32" ;;
       *)
         path="sparc32" ;;
@@ -1281,6 +1283,8 @@ case $host in
     # abilist="64" only.
     #
     case $host_cpu in
+      [ultrasparct[345]])
+        gcc_32_cflags="$gcc_cflags -Wa,-xarch=v8plusd" ;;
       sparc64 | sparcv9* | ultrasparc*)
         gcc_32_cflags="$gcc_cflags -Wa,-xarch=v8plus" ;;
     esac
@@ -1321,6 +1325,7 @@ case $host in
 	case $host_cpu in
 	  sparcv8 | microsparc | supersparc | turbosparc)
 					      cc_cflags_arch="-xarch=v8" ;;
+          [ultrasparct[345]])                 cc_cflags_arch="-xarch=v8plusd" ;;
 	  sparc64 | sparcv9* | ultrasparc*)   cc_cflags_arch="-xarch=v8plus" ;;
 	  *)                                  cc_cflags_arch="-xarch=v7" ;;
 	esac
@@ -1377,7 +1382,7 @@ case $host in
 	    path_64="sparc64/ultrasparc1234 sparc64" ;;
 	  [ultrasparc[34]])
 	    path_64="sparc64/ultrasparc34 sparc64/ultrasparc1234 sparc64" ;;
-	  [ultrasparct[1234]])
+	  [ultrasparct[12345]])
 	    path_64="sparc64/ultrasparct1 sparc64" ;;
 	  *)
 	    path_64="sparc64"
@@ -1636,7 +1641,7 @@ case $host in
 	path="x86/coreinhm x86/p6/sse2 x86/p6/p3mmx x86/p6/mmx x86/p6 x86"
 	path_64="x86_64/coreinhm x86_64/core2 x86_64"
 	;;
-      coreisbr)
+      coreisbr | coreihwl | coreibwl)
 	gcc_cflags_cpu="-mtune=corei7 -mtune=core2 -mtune=k8"
 	gcc_cflags_arch="-march=corei7 -march=core2 -march=core2~-mno-sse2 -march=k8 -march=k8~-mno-sse2"
 	path="x86/coreisbr x86/p6/sse2 x86/p6/p3mmx x86/p6/mmx x86/p6 x86"
@@ -3417,7 +3422,7 @@ if test "$gmp_asm_syntax_testing" != no; then
     power*-*-aix*)
       GMP_INCLUDE_MPN(powerpc32/aix.m4)
       ;;
-    sparcv9*-*-* | ultrasparc*-*-* | sparc64-*-*)
+    *sparc*-*-*)
       case $ABI in
         64)
           GMP_ASM_SPARC_REGISTER

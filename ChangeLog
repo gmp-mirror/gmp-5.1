@@ -37,6 +37,9 @@
 	* mpn/arm/arm-defs.m4 (LEA): Rewrite to properly handle repeated use.
 	(EPILOGUE_cpu): Define.
 
+	* mpn/x86/darwin.m4 (m4append): Move definition from here...
+	* mpn/asm-defs.m4: ...to here.
+
 2012-03-17  Marc Glisse  <marc.glisse@inria.fr>
 
 	* tests/cxx/t-do-exceptions-work-at-all-with-this-compiler.cc: New file.

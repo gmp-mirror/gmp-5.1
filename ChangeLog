@@ -34,6 +34,9 @@
 	* tests/arm32call.asm: New file.
 	* tests/arm32check.c: New file.
 
+	* mpn/arm/arm-defs.m4 (LEA): Rewrite to properly handle repeated use.
+	(EPILOGUE_cpu): Define.
+
 2012-03-17  Marc Glisse  <marc.glisse@inria.fr>
 
 	* tests/cxx/t-do-exceptions-work-at-all-with-this-compiler.cc: New file.

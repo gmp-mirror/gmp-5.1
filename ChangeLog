@@ -1,3 +1,9 @@
+2013-06-17  Torbjorn Granlund  <tege@gmplib.org>
+
+	* mpn/powerpc64/p6/lshift.asm: Fix typo in label reference.
+	* mpn/powerpc64/p6/rshift.asm: Likewise.
+	* mpn/powerpc64/p6/lshiftc.asm: Likewise.
+
 2013-05-22  Torbjorn Granlund  <tege@gmplib.org>
 
 	* doc/gmp.texi (Reporting Bugs): Ask for configure's output.

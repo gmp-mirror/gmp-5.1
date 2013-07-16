@@ -1,3 +1,7 @@
+2013-07-16  Torbjorn Granlund  <tege@gmplib.org>
+
+	* doc/gmp.texi: Declare countless of function arguments as 'const'.
+
 2013-07-12  Torbjorn Granlund  <tege@gmplib.org>
 
 	* mpn/generic/sbpi1_div_sec.c: Partial rewrite.

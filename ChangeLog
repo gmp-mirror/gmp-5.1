@@ -12,6 +12,11 @@
 	* mpn/powerpc64/p6/rshift.asm: Likewise.
 	* mpn/powerpc64/p6/lshiftc.asm: Likewise.
 
+2013-06-09  Marc Glisse  <marc.glisse@inria.fr>
+
+	* mpn/generic/get_d.c (mpn_get_d): Avoid signed overflow.
+	* mpz/kronzs.c (mpz_kronecker_si): Use ABS_CAST.
+
 2013-05-22  Torbjorn Granlund  <tege@gmplib.org>
 
 	* doc/gmp.texi (Reporting Bugs): Ask for configure's output.

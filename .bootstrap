@@ -10,6 +10,10 @@ rm -rf autom4te.cache
 # script.
 aclocal && libtoolize && autoconf && autoheader && automake
 
+cp -L ltmain.sh foo
+rm ltmain.sh
+mv foo ltmain.sh
+
 cat >doc/version.texi <<EOF
 @set UPDATED 19 January 2038
 @set UPDATED-MONTH January 2038

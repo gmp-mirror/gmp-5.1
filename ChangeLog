@@ -2,6 +2,12 @@
 
 	* doc/gmp.texi: Declare countless of function arguments as 'const'.
 
+2013-07-15  Torbjorn Granlund  <tege@gmplib.org>
+
+	* mpn/generic/sb_div_sec.c: Compute inverse as floor(B^2/(dh+1)), per
+	Niels' suggestion.
+	* mpn/generic/sbpi1_div_sec.c: Remove inverse rounding-up code.
+
 2013-07-12  Torbjorn Granlund  <tege@gmplib.org>
 
 	* mpn/generic/sbpi1_div_sec.c: Partial rewrite.

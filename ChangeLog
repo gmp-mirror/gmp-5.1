@@ -1,3 +1,7 @@
+2013-09-27  Niels Möller  <nisse@lysator.liu.se>
+
+	* NEWS: Mention the ia64 mpn_divrem_2 bugfix.
+
 2013-07-16  Torbjorn Granlund  <tege@gmplib.org>
 
 	* doc/gmp.texi: Declare countless of function arguments as 'const'.

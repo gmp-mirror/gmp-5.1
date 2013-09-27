@@ -5,7 +5,7 @@ Verbatim copying and distribution of this entire article is permitted in any
 medium, provided this notice is preserved.
 
 
-Changes between GMP version 5.1.1 and 5.1.2
+Changes between GMP version 5.1.2 and 5.1.3
 
   BUGS FIXED
   * The internal functions mpn_sbpi1_div_qr_sec mpn_sbpi1_div_r_sec could

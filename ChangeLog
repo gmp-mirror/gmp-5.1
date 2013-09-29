@@ -1,5 +1,7 @@
 2013-09-29  Torbjorn Granlund  <tege@gmplib.org>
 
+	* Version 5.1.3 released.
+
 	* Makefile.am (LIBGMP_LT_*, LIBGMPXX_LT_*): Bump version info.
 	* gmp-h.in: Bump version.
 

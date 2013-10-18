@@ -1,3 +1,7 @@
+2013-10-08  Marc Glisse  <marc.glisse@inria.fr>
+
+	* gmp-h.in: Remove __need_size_t. Include <stddef.h>, not <cstddef>.
+
 2013-09-29  Torbjorn Granlund  <tege@gmplib.org>
 
 	* Version 5.1.3 released.
